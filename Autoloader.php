@@ -23,7 +23,6 @@ class Autoloader
         $className = $className[count($className) - 1];
         $filename = $className . static::$fileExt;
         foreach (static::$fileIterator as $file) {
-            //exit(strtolower($filename));
             if (strtolower($file->getFilename()) === strtolower($filename)) {
                 if ($file->isReadable()) {
                     include_once $file->getPathname();

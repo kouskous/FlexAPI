@@ -1,0 +1,6 @@
+{
+    "name": "zekri/flexapi",
+    "require": {
+        "doctrine/orm": "v2.5.5"
+    }
+}

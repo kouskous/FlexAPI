@@ -1,0 +1,21 @@
+[
+  {
+    "route": "/",
+    "method": "get",
+    "controller": "index",
+    "action": "defaut"
+  },
+  {
+    "route": "/article",
+    "method": "get",
+    "controller": "art",
+    "action": "default"
+  },
+  {
+    "route": "/livre",
+    "method": "get",
+    "controller": "book",
+    "action": "default"
+  }
+
+]
