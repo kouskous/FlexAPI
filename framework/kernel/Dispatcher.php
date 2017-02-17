@@ -17,10 +17,9 @@ class Dispatcher
     {
         //Getting request endpoint
         $directoryAbsolutePath = explode('/', __DIR__);
-        $directoryName = $directoryAbsolutePath[count($directoryAbsolutePath) - 1];
+        $directoryName = $directoryAbsolutePath[count($directoryAbsolutePath)-3];
         $path = explode("$directoryName", $_SERVER['REQUEST_URI']);
         $endpoint = (count($path) == 1) ? $path[0] : $path[1];
-
         //Loading router
         $router_config_file = file_get_contents(Dispatcher::$routerPath);
         $router = json_decode($router_config_file);

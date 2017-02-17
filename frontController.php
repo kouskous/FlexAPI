@@ -6,21 +6,15 @@
  * Time: 20:30
  */
 include 'Autoloader.php';
-use flexapi\http\Response;
 use flexapi\kernel\Dispatcher;
+use flexapi\kernel\Resolver;
 
 //Classes and interfaces autoload
 spl_autoload_register('Autoloader::loader');
-echo file_get_contents('php://input');
-Dispatcher::route();
 
+//Dispatching
+$response = Dispatcher::route();
 
-//build request object
+//View resolving
+Resolver::generateResponse($response);
 
-//Build response object
-$response = new Response();
-
-//$response = $kernel->handle($request);
-//$response->send();
-
-//send response()
